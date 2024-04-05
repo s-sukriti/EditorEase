@@ -1,0 +1,154 @@
+JournalofArtificialIntelligenceResearch71(2021)175-189Submitted12/2020;published06/2021
+Viewpoint:
+AI as Author – Bridging the Gap
+
+Studies in computational creativity concentrate on identifying the core elements of cre
+ative forms (such as literature, visual art and music) from an algorithmic perspective, with
+the aim of replicating or stimulating human creativity (Turner, 2014; Besold et al., 2015;
+Veale et al., 2019). Similarly, natural language generation is interested in the production
+of realistic text (Reiter & Dale, 1997)                              Within this field,
+the generation of writing that might be considered literary (such as poetry, prose and
+drama) is an active research do main, ranging from human-in-the-loop (K¨obis & Mossink,
+2021) and machine-in-the-loop approaches (Clark et al., 2018) to fully automated
+systems. The aim is to generate creative texts that are indistinguishable from those
+written by humans (Singh et al., 2017; Xu et al., 2018; Chandu et al., 2019; Gero &
+Chilton, 2019; He et al., 2019; Chakrabarty et al., 2020; Moreno-Jim´enez et al., 2020;
+Zhai et al., 2020).
+©2021AIAccessFoundation.Allrightsreserved.
+VanHeerden&Bas
+In this article, we argue for the inclusion of literary scholars in the development of
+machine learning models to improve the quality of generated text. To be clear, we are
+specifically interested in recent deep learning approaches that do not draw on literary ex
+pertise, including those of Jain et al. (2017), Li et al. (2018), Loller-Andersen and
+Gamb¨ack (2018), Wei et al. (2018), Xu et al. (2018), Yang et al. (2018), Yi et al. (2018),
+Chen et al. (2019), Jhamtani et al. (2019), Liu et al. (2019), Yeh et al. (2019), Zugarini et
+al. (2019), Agarwal and Kann (2020). Although some studies ask human judges (with
+varying back grounds in literature) to evaluate their output, these evaluators are not
+involved in the development of evaluation criteria nor the models in general.
+This paper’s concern with evaluation is an illustration of possible insights that may
+arise through such interdisciplinary collaboration. Specifically, we rethink the
+conceptualisation of weakness in creative language models, which is addressed by way
+of an example of the state-of-the-art language model GPT-2 (Radford et al., 2019a).
+Furthermore, we examine the role of fluency, coherence and readability in the evaluation
+of generated poetry, touching on                                   features such
+as ambiguity, figurative language and originality as well. This article suggests that a
+network of researchers from literary studies and machine learning could work together to
+create a shared language between disciplines with vastly different methodologies.
+According to Beatie (1979), “[o]nly when computer people learn, for example, to write
+readable prose and literary critics learn to understand the language of measurement can
+the ‘computer revolution’ in literary studies really begin”.
+2. Literary Theory
+For this work, we define literature simply and traditionally as imaginative or invented
+writing, like fiction (Eagleton, 2011). Literature is a broad term that involves many different
+genres (or categories) of texts: poems, short stories, novels, dramatic works, letters,
+essays, film scripts and speeches (Todorov & Lyons, 2007). 
+             A common misconception is
+that literary interpretation is purely subjective or merely based on a person’s intuition
+(Hirsch, 1967; Wolfgang, 1978; Richards, 2017). Every good work of literature follows a
+certain logic and uses specific techniques to communicate meaning to readers. As an
+example, Shakespearean texts are so complex that the bard’s use of literary devices (or
+tools of writing) are examined and debated to this day (Powell, 1980; Vickers, 1995;
+Purcell, 2010). Although every reader will interpret a story in a slightly different way
+because of their unique background, certain elements in the text point in the same
+direction.
+Not to be dismissed as personal and unscientific – though this is a topic of much dis
+cussion (Beatie, 1979) – scholarly deliberations on the substance of literature have a long
+standing history. Literary theory1is a well-established field that includes various
+competing scholarly approaches, each with its theoretical positions and commitments
+(Culler, 1997). It involves the systematic examination of literary texts to understand how
+they work (i.e. con vey meaning and give rise to particular interpretations) and why they
+are deemed literary, valuable or ‘good’.
+1. Note that this article concentrates on literary theory. The nature of the relationship between linguistics
+and poetics is subject to scholarly debate (Jakobson, 1960). Although literature may be studied lin
+guistically (Fabb, 1997), literary studies and linguistics should not be conflated (Cameron, 2011). For
+example, to understand “the work of literature” (Attridge, 2015) one must consider artistic merit, which
+requiresmorethanalinguisticapproachtoliterature.
+176
+AIasAuthor
+As there are various types of methods to train machine learning models, there are
+various types, or schools, of literature and literary theory. Each theory is an arrangement
+of principles or a collection of ideas that helps define and explain particular categories of
+writing. Within the field of literary studies one might, for example, examine genre
+conventions or the ‘rules’ of these categories, asking which features define a book as
+narrative nonfiction, or how does one structure a detective novel, or what makes a
+Shakespearean sonnet successful.
+
+Lau et al. (2018) show the importance of expert evaluation for poetry generation, and
+argue that future work should focus on moving beyond form. Instead, it could attend to
+the complex interconnection of form and feeling (Freeman, 2009). According to Brooks
+and Warren (1976), a poem is not an assembly of mechanically combined elements (e.g.
+rhyme and meter) like a wall composed of bricks. Rather than concentrating on an
+element in isolation, we should concentrate on the relation between elements, on how
+they work
+177
+VanHeerden&Bas
+together to communicate meaning and emotion to the reader, i.e. create a poetic effect
+(Brooks & Warren, 1976). In other words, we should move beyond generating texts that
+‘look’ literary (by mimicking formal properties) to texts that are literary (Veale, 2013).
+In the next two sections, we extend this idea through a problematisation of priorities in
+text generation. First, centring on evaluation as an example of an important stage in the
+creative text generation process and, then, exploring possible avenues of collaboration,
+we seek to demonstrate that benefit could be derived from literary theoretical
+perspectives.
+
+
+
+
+
+
+4. Example Gap: Evaluation
+To improve the quality of computer-generated literature, we suggest combining tools and
+insights from various text-centred (rather than biographical, cultural or socio-historical) ap
+proaches in literary theory. Involving true expertise on what literature is and how it works
+would strengthen current research on learning-based text generation systems. The
+issues currently faced in machine-generated writing could be addressed more effectively
+by ap plying literary theoretical understandings of creativity, originality, ambiguity and
+emotion, among others.
+However, efforts at collaboration between the “two cultures” face serious obstacles
+
+(H¨am¨al¨ainen & Alnajjar, 2019).
+Qualitative evaluation, in comparison to quantitative methods, has been viewed as in
+consistent, unsystematic and therefore less effective (Lawrence, 1993). However, the
+differ ence between the two methods lies in that “the logic of qualitative evaluation is
+grounded in a willingness to accept ambiguity, rather than being wedded to a ‘horse race’
+mentality in which the [approach] with the highest gain score is the winner” (McLeod,
+2011). This makes it the ideal approach to literature, given its propensity for resisting
+straightforward
+
+Jakobson (1923) fa mously described literary language as “organised violence committed
+on ordinary speech”. In the modernist sense, poetry may be thought of as a language
+laboratory, a space of experimentation with language itself (Korg, 1979).
+Gruber (1988) views originality as a constituent of creativity, which he associates with
+a deliberate departure from norms. Literary techniques include asyntactic structure
+(showing no syntactical rules or regularity), 
+
+anastrophe (deliberate change of word order),
+anadiplosis (repetition for special effect) and ambiguity (discussed in 4.2.3). Considering,
+for instance, stream of consciousness and surrealist techniques, further examples are the
+absence of formal features (such as rhyme, meter and punctuation) and typographic
+experiments – see “l(a” (Cummings, 1991) and “In a Station of the Metro” (Pound, 1913).
+The argument that creative endeavours “must deal not with the predictable and
+repeatable – the stuff of normal science – but with the unique and unrepeatable” (Gruber,
+1988) presents an occasion to rethink conceptualisations of weakness in language
+models, returning us to the vital question of evaluation.
+
+
+6. Conclusion
+Ng (2017) states that AI is the new electricity. Collaboration between areas of knowledge
+on this subject is inevitable. According to Potter (1991),
+we [computerscholars]mustconnectourselves–throughtheory–tothelargerworld
+of thought that we live in. As a developing discipline, we have for too long lived ina
+tinkering “let’s-try-this-and-see-what-happens” mode. [...].Bruteanalysiswithoutan
+elegantly and elaborately structured sense of why we are doing what we are doing
+leadstoassertionsthatdonotmatter.
+182
+AIasAuthor
+This study recommends drawing on expertise in the humanities, primarily literary the
+ory, to contribute to the development of computer science, specifically AI writing. To
+achieve human-level creativity, machine-generated literature has to overcome various
+obsta cles, such as ambiguity, emotional impact, poetic effect and storytelling. Engaging
+with the scholars that specialise in the building blocks of imaginative writing – literature’s
+codes, if you will –                            would allow AI researchers to better determine the present
+shortcomings of machine-generated literature and explore how structural elements jointly
+convey meaning and emotion. Bridging the gap between machine learning techniques
+and literary theory could guide future analyses toward developments that matter.
